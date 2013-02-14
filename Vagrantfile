@@ -11,7 +11,7 @@ Vagrant::Config.run do |config|
 
   # The url from where the 'config.vm.box' box will be fetched if it
   # doesn't already exist on the user's system.
-  config.vm.box_url = "https://dl.dropbox.com/s/m22yeq59v2cn4h7/Squeeze64_PHP_RVM_Node.box?dl=1"
+  config.vm.box_url = "https://dl.dropbox.com/s/m22yeq59v2cn4h7/Squeeze64_PHP_RVM_Node.box?token_hash=AAHk1P67Cty2bCBCVrvTA9eyrtF7CtJ4LCxMqOL-B1Ka4Q&dl=1"
 
   # Boot with a GUI so you can see the screen. (Default is headless)
   # config.vm.boot_mode = :gui
