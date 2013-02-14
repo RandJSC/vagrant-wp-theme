@@ -9,3 +9,12 @@ by Mike Green
 3. Run `vagrant up`. Let it download the base box and provision it.
 4. Visit http://localhost:8888/ and setup WordPress. MySQL username is __root__ and password is __root__
 5. Build a WordPress theme inside the `theme` folder.
+
+## About the Base Box
+
+The base box for this setup is an opinionated Debian Squeeze 64bit Linux installation that comes with the following goodies:
+
+* PHP-FPM
+* Nginx
+* Node.js
+* RVM with Ruby 1.9.3 installed
