@@ -1,13 +1,22 @@
 #= Main Puppet Manifest
 
+# Update Apt Repo
+exec {"update-apt":
+	command => "apt-get update",
+	cwd     => "/",
+	path    => ["/usr/bin", "/usr/local/bin", "/bin", "/usr/local/sbin", "/usr/sbin", "/sbin"],
+}
+
 # Install cURL
 package {"curl":
-	ensure => present
+	ensure => present,
+	require => Exec["update-apt"],
 }
 
 # Install MySQL Client Libraries
 package {"libmysqlclient-dev":
-	ensure => present
+	ensure => present,
+	require => Exec["update-apt"],
 }
 
 # Download WordPress
@@ -50,6 +59,6 @@ exec {"chmod_wordpress":
 exec {"setup_mysql":
 	command => "echo 'create database wordpress_dev;' | mysql --user=root --password=root",
 	path    => ["/usr/bin", "/usr/local/bin", "/bin", "/usr/local/sbin", "/usr/sbin", "/sbin"],
-	unless  => "echo 'show databases' | mysql --user=root --password=k2130k | grep alteredimage",
+	unless  => "echo 'show databases' | mysql --user=root --password=k2130k | grep wordpress_dev",
 }
 
