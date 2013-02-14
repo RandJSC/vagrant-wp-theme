@@ -1,0 +1,7 @@
+.htaccess
+.vagrant
+.DS_Store
+._*
+*~
+*.swp
+.sass-cache
