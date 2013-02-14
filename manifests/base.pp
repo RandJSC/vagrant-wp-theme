@@ -59,6 +59,6 @@ exec {"chmod_wordpress":
 exec {"setup_mysql":
 	command => "echo 'create database wordpress_dev;' | mysql --user=root --password=root",
 	path    => ["/usr/bin", "/usr/local/bin", "/bin", "/usr/local/sbin", "/usr/sbin", "/sbin"],
-	unless  => "echo 'show databases' | mysql --user=root --password=k2130k | grep wordpress_dev",
+	unless  => "echo 'show databases' | mysql --user=root --password=root | grep wordpress_dev",
 }
 
