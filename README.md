@@ -16,5 +16,8 @@ The base box for this setup is an opinionated Debian Squeeze 64bit Linux install
 
 * PHP-FPM
 * Nginx
+* MySQL
 * Node.js
 * RVM with Ruby 1.9.3 installed
+
+We use Ruby for our Thor build scripts, and Node.js to compile CoffeeScripts.
