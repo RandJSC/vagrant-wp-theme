@@ -34,7 +34,7 @@ class wordpress::install {
 	}
 
 	exec {"chmod_wordpress":
-		command => "chmod -R vagrant:vagrant $install_path",
+		command => "chown -R vagrant:vagrant $install_path",
 		cwd     => "/home/vagrant",
 		unless  => "ls -l $install_path | grep vagrant",
 		require => Exec["install_wordpress"],
