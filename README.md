@@ -6,6 +6,7 @@ by Mike Green
 
 1. Install Ansible if you don't already have it. You'll need it to provision the box. https://github.com/ansible/ansible
 1. Clone and `cd` into this repo
+1. Reinitialize the repo to make it your own like so: `rm -rf .git && git init`
 1. Edit `Vagrantfile` and change `THEME_NAME` to the name of your theme on line 26.
 1. Run `vagrant up`. Let it download the base box and provision it.
 1. Visit http://localhost:8888/ and setup WordPress. MySQL username is __root__, password is __root__, DB name is __wordpress_dev__
