@@ -4,6 +4,7 @@ by Mike Green
 
 ## Setup
 
+1. Install Ansible if you don't already have it. You'll need it to provision the box. https://github.com/ansible/ansible
 1. Clone and `cd` into this repo
 1. Edit `Vagrantfile` and change `theme-name` to the name of your theme.
 1. Run `vagrant up`. Let it download the base box and provision it.
