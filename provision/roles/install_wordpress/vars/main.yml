@@ -1,0 +1,5 @@
+---
+db_host: 'localhost'
+wp_db_user: 'root'
+wp_db_password: 'root'
+wp_debug: false

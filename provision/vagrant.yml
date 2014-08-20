@@ -1,0 +1,7 @@
+---
+- hosts: default
+  roles:
+    - role: install_wordpress
+      domain: 'localhost:8888'
+      db_name: 'wordpress_dev'
+      wp_debug: true
