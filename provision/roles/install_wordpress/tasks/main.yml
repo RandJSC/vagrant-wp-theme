@@ -4,6 +4,12 @@
   sudo: yes
   register: wp_download
 
+- name: add mysql database
+  mysql_db: name=wordpress_dev state=present login_user=root login_password=root
+
+- name: add mysql remote user
+  mysql_user: name=root password=root host=% state=present login_user=root login_password=root priv=*.*:ALL
+
 - name: extract wordpress
   command: tar xvzf /tmp/latest.tar.gz chdir=/tmp creates=/tmp/wordpress
   sudo: yes
